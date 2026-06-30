@@ -3,3 +3,17 @@ spring:
     cache: false
 server:
   port: 8080
+
+# Demo credentials for the in-memory users wired up in SecurityConfig.
+# Externalizing them here (instead of hardcoding in Java) is a common Spring
+# pattern, and means you can change credentials without touching code.
+app:
+  demo-users:
+    user:
+      username: user
+      password: password
+      role: USER
+    admin:
+      username: admin
+      password: adminpass
+      role: ADMIN
