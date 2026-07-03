@@ -31,19 +31,86 @@
   </header>
 
   <main class="container">
-    <section class="card">
-      <h1>Admin Panel</h1>
-      <p class="muted">
-        This page is only reachable by users with the <strong>ADMIN</strong> role.
-        It demonstrates role-based access control in Spring Security — try
-        logging in with the regular demo user and visiting this page to see it blocked.
-      </p>
+    <section class="hero card">
+      <div class="hero-left">
+        <h1>Admin Panel</h1>
+        <p class="muted">
+          This page is only reachable by users with the <strong>ADMIN</strong> role.
+          It demonstrates role-based access control in Spring Security — try
+          logging in with the regular demo user and visiting this page to see it blocked.
+        </p>
 
-      <div class="note">
-        <strong>For students:</strong> this route's access rule lives in
-        <code>SecurityConfig.java</code> (<code>hasRole("ADMIN")</code>),
-        not in this template or the controller.
+        <div class="hero-actions">
+          <button class="btn btn-primary" type="button">Manage users</button>
+          <button class="btn btn-secondary" type="button">Review logs</button>
+          <button class="btn btn-secondary" type="button">Approve requests</button>
+        </div>
+
+        <div class="note">
+          <strong>For students:</strong> this route's access rule lives in
+          <code>SecurityConfig.java</code> (<code>hasRole("ADMIN")</code>),
+          not in this template or the controller.
+        </div>
       </div>
+
+      <div class="hero-right">
+        <div class="stat">
+          <div class="stat-label">Active users</div>
+          <div class="stat-value">1,248</div>
+          <div class="stat-sub muted">Including recently signed-in accounts</div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="stat">
+          <div class="stat-label">Pending approvals</div>
+          <div class="stat-value">4</div>
+          <div class="stat-sub muted">Access requests and role changes</div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="stat">
+          <div class="stat-label">Security alerts</div>
+          <div class="stat-value">0</div>
+          <div class="stat-sub muted">No critical events in the last 24h</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2>Pending approvals</h2>
+        <p class="muted">Review access and configuration changes that need your attention.</p>
+        <ul class="list">
+          <li>
+            <span class="pill pill-amber">Review</span>
+            <span>New admin access request for user <strong>jane.doe</strong></span>
+            <span class="muted right">2 hours ago</span>
+          </li>
+          <li>
+            <span class="pill pill-amber">Review</span>
+            <span>Role change request for <strong>john.smith</strong></span>
+            <span class="muted right">4 hours ago</span>
+          </li>
+          <li>
+            <span class="pill pill-gray">Scheduled</span>
+            <span>Certificate renewal window opens tomorrow</span>
+            <span class="muted right">Tomorrow</span>
+          </li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Admin tools</h2>
+        <p class="muted">Quick links for common administrative actions.</p>
+        <div class="quick">
+          <a class="quick-link" href="#">User management</a>
+          <a class="quick-link" href="#">Security policies</a>
+          <a class="quick-link" href="#">Audit logs</a>
+          <a class="quick-link" href="#">System settings</a>
+        </div>
+      </article>
     </section>
 
     <footer class="footer muted">
